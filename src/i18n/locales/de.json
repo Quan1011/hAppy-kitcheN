@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "menu": "Speisekarte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Happy Kitchen",
+    "title": "hAppy kitcheN bietet vielfältige asiatische Gerichte – mit Herz und Liebe",
+    "description": "",
+    "notice": {
+      "card": "Kartenzahlung ab 20 € – keine American Express",
+      "effective": "Preisliste gültig ab 08.2025",
+      "extra": "Alle Preise verstehen sich in Euro und beinhalten Reis, wo nicht anders angegeben."
+    },
+    "hours": {
+      "title": "Öffnungszeiten",
+      "daily": "Täglich",
+      "weekday": "Montag – Freitag",
+      "wednesday": "Mittwoch",
+      "saturday": "Samstag",
+      "sunday": "Sonntag",
+      "holiday": "Feiertag"
+    },
+    "reservation": {
+      "title": "Reservierung & Take-away",
+      "description": "Rufen Sie uns an oder besuchen Sie uns vor Ort."
+    }
+  },
+  "tags": {
+    "vegan": "Pflanzlich",
+    "spicy": "Scharf"
+  },
+  "alert": {
+    "payment": {
+      "badge": "Hinweis",
+      "message": "Kartenzahlung ab 20 € – keine American Express"
+    }
+  },
+  "navigator": {
+    "badge": "Schnellauswahl",
+    "title": "Wähle die Kategorie, die du sehen möchtest",
+    "showAll": "Alles anzeigen",
+    "all": "Alle",
+    "scrollTop": "Zur Schnellauswahl"
+  },
+  "section": {
+    "label": "Kategorie"
+  },
+  "menu": {
+    "sections": {
+      "vorspeise": {
+        "title": "Vorspeise",
+        "description": "Suppen, Salate und kleine Snacks – perfekt zum Start."
+      },
+      "hauptgerichte": {
+        "title": "Hauptgerichte",
+        "description": "Wok-Klassiker, Nudelgerichte und Phở – unsere Hauptgerichte."
+      },
+      "dessert": {
+        "title": "Dessert",
+        "description": "Süßer Abschluss nach vietnamesischer Art."
+      },
+      "extras": {
+        "title": "Extras & Soßen",
+        "description": "Perfekt zum Kombinieren oder als Beilage."
+      }
+    }
+  },
+  "legend": {
+    "badge": "Kennzeichnungen",
+    "allergen": "Allergene",
+    "additives": "Zusatzstoffe",
+    "note": "Für Fragen wenden Sie sich bitte an unser Team – wir beraten Sie gerne individuell.",
+    "labels": {
+      "title": "Kennzeichnungen",
+      "vegan": "Vegetarisch",
+      "spicy": "Scharf"
+    }
+  },
+  "payments": {
+    "badge": "Zahlung",
+    "title": "Beliebte Methoden in Deutschland",
+    "note": "Kartenzahlung ab 20 € (American Express wird nicht akzeptiert)"
+  },
+  "footer": {
+    "address": "Adresse",
+    "phone": "Telefon",
+    "whatsapp": "WhatsApp",
+    "tagline": "Asiatische Küche mit viel Herz",
+    "note": "Frisch gekochte Speisen, natürliche Zutaten und liebevoller Service – täglich für dich.",
+    "copyright": "Alle Rechte vorbehalten."
+  }
+}
+

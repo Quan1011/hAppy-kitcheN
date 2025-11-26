@@ -1,0 +1,176 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Happy Kitchen",
+    "title": "Authentic Vietnamese cuisine for every taste",
+    "description": "From comforting phở soups and creative bún bowls to crispy street-food classics – our menu blends tradition with modern presentation.",
+    "notice": {
+      "card": "Card payments from €20 – no American Express",
+      "effective": "Price list valid from 08/2025",
+      "extra": "All prices include rice unless stated otherwise."
+    },
+    "hours": {
+      "title": "Opening hours",
+      "daily": "Daily",
+      "weekday": "Monday – Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "reservation": {
+      "title": "Reservation & Take-away",
+      "description": "Call us or visit us on site."
+    }
+  },
+  "tags": {
+    "vegan": "Plant-based",
+    "spicy": "Spicy"
+  },
+  "alert": {
+    "payment": {
+      "badge": "Notice",
+      "message": "Card payments from €20 – no American Express"
+    }
+  },
+  "navigator": {
+    "badge": "Quick menu",
+    "title": "Choose the category you want to view",
+    "showAll": "Show all",
+    "all": "All",
+    "scrollTop": "Back to Quick Menu"
+  },
+  "section": {
+    "label": "Section"
+  },
+  "menu": {
+    "sections": {
+      "vorspeise": {
+        "title": "Starters",
+        "description": "Soups, salads and small snacks – perfect to start."
+      },
+      "hauptgerichte": {
+        "title": "Main Dishes",
+        "description": "Wok classics, noodle dishes and Phở – our main dishes."
+      },
+      "dessert": {
+        "title": "Dessert",
+        "description": "Sweet finish in Vietnamese style."
+      },
+      "extras": {
+        "title": "Extras & Sauces",
+        "description": "Perfect for combining or as a side dish."
+      }
+    },
+    "items": {
+      "01": { "name": "Vegetable Soup", "description": "Clear vegetable broth with seasonal vegetables" },
+      "02": { "name": "Tofu Soup with Coconut Milk", "description": "Creamy coconut base, tofu and colorful vegetables" },
+      "03": { "name": "Shrimp Soup", "description": "Aromatic broth with shrimp and vegetables" },
+      "04": { "name": "Salmon Soup", "description": "Mild smoked salmon with fresh vegetables" },
+      "05": { "name": "Ramen Noodle Soup", "description": "Chicken, egg noodles and vegetables in savory broth" },
+      "06": { "name": "Coconut Milk Soup with Gyoza", "description": "Silky coconut broth with gyoza and vegetables" },
+      "07": { "name": "Peking Soup", "description": "Sweet and sour soup with chicken, vegetables and egg" },
+      "11": { "name": "Avocado Salad", "description": "Mixed salad with avocado and homemade sauce" },
+      "12": { "name": "Mango Salad", "description": "Fresh mango salad with chicken, herbs and peanuts" },
+      "13": { "name": "Salmon Salad", "description": "Mixed salad with crispy salmon & teriyaki" },
+      "20": { "name": "Edamame", "description": "Japanese beans with sea salt" },
+      "21": { "name": "Summer Rolls with Tofu (2 pcs.)", "description": "Rice paper rolls with tofu, herbs & fish sauce" },
+      "22": { "name": "Summer Rolls with Shrimp & Chicken (2 pcs.)", "description": "Combination of shrimp, chicken and herbs" },
+      "23": { "name": "Crispy Spring Rolls (2 pcs.)", "description": "Filled with chicken, glass noodles and vegetables" },
+      "24": { "name": "Vegan Mini Spring Rolls (8 pcs.)", "description": "Crispy rolls with vegetable filling" },
+      "25": { "name": "Gyoza (5 pcs.)", "description": "Japanese dumplings with chicken and vegetables" },
+      "26": { "name": "Yakitori (3 pcs.)", "description": "Japanese chicken skewers with teriyaki" },
+      "27": { "name": "Fried Shrimp (3 pcs.)", "description": "Crispy fried with dip" },
+      "28": { "name": "Keiko (5 pcs.)", "description": "Steamed dumplings with shrimp filling" },
+      "40-45": { "name": "Tofu Selection", "description": "Choose your favorite sauce for our vegan wok dish." },
+      "50-55": { "name": "Chicken", "description": "Classic wok dish with light marinade." },
+      "60-69": { "name": "Breaded Chicken", "description": "Crispy breaded, crunchy outside – juicy inside." },
+      "70-79": { "name": "Crispy Chicken", "description": "Stir-fried in the wok and extra crispy." },
+      "80-89": { "name": "Crispy Duck", "description": "Crispy outside, tender inside – perfect with fruity sauces." },
+      "90-95": { "name": "Beef", "description": "Finely sliced beef in the wok" },
+      "100-105": { "name": "Shrimp", "description": "Juicy shrimp with crisp vegetables" },
+      "110-112": { "name": "Bún Signature", "description": "Fresh herbs, crisp salad and crispy toppings." },
+      "120-127": { "name": "Fried Noodles", "description": "Individually combinable – from vegetables to shrimp." },
+      "130-137": { "name": "Fried Rice", "description": "Popular as a main course or side dish." },
+      "140-147": { "name": "Udon Curry Bowl", "description": "Warming curry base with your favorite protein." },
+      "150-156": { "name": "Fried Udon", "description": "Hearty and filling." },
+      "160-166": { "name": "Fried Rice Noodles", "description": "Choose your protein accompaniment." },
+      "170-176": { "name": "Rice Noodles with Curry Paste", "description": "Curry paste brings fine spiciness into play." },
+      "180": { "name": "Pho with Tofu", "description": "Light & aromatic" },
+      "181": { "name": "Pho with Chicken", "description": "Classic & warming" },
+      "182": { "name": "Pho with Beef", "description": "Intense & hearty" },
+      "1000": { "name": "Fried Banana with Honey", "description": "" },
+      "1001": { "name": "Crispy Sesame Balls (4 pcs.)", "description": "" },
+      "1002": { "name": "Mochi Ice Cream (2 pcs.)", "description": "" },
+      "EX": { "name": "Sides & Sauces", "description": "Expand your menu with rice, fried noodles or signature sauces." },
+      "extras": {
+        "reis": "Rice",
+        "gebratenerreis/nudeln": "Fried Rice / Noodles",
+        "sweetchilisoße": "Sweet Chili Sauce",
+        "teriyakisoße": "Teriyaki Sauce",
+        "chopsuey/kungpaosoße": "Chop Suey / Kung Pao Sauce",
+        "currysoße": "Curry Sauce",
+        "mangosoße": "Mango Sauce",
+        "erdnusssoße": "Peanut Sauce"
+      }
+    },
+    "sauces": {
+      "chopSuey": "Chop Suey Sauce",
+      "redThai": "Red Thai Curry Sauce",
+      "greenThai": "Green Thai Curry Sauce",
+      "mango": "Mango Sauce",
+      "peanut": "Peanut Sauce",
+      "kungPao": "Kung Pao Sauce",
+      "sweetSour": "Sweet & Sour Sauce"
+    },
+    "variations": {
+      "mitgemüsen": "with Vegetables",
+      "mithühnerfleisch": "with Chicken",
+      "mitpaniertemhühnerfleisch": "with Breaded Chicken",
+      "mitknusprigemhühnerfleisch": "with Crispy Chicken",
+      "mitrindfleisch": "with Beef",
+      "mitknusprigerente": "with Crispy Duck",
+      "mitgarnelen": "with Shrimp",
+      "mittofu": "with Tofu",
+      "bamigorengmithuhn&rindimcurry": "Bami Goreng with Chicken, Beef and Curry",
+      "nasigorengmithuhn&rindimcurry": "Nasi Goreng with Chicken, Beef and Curry",
+      "gebratenertofugemüselemongras&knoblauch": "Fried Tofu, Vegetables, Lemongrass & Garlic",
+      "knusprigefrühlingsrollen": "Crispy Spring Rolls",
+      "rindfleischgemüselemongras&knoblauch": "Beef, Vegetables, Lemongrass & Garlic",
+      "chopsueysoße": "Chop Suey Sauce",
+      "rotethaicurrysoße": "Red Thai Curry Sauce",
+      "grünethaicurrysoße": "Green Thai Curry Sauce",
+      "mangosoße": "Mango Sauce",
+      "erdnusssoße": "Peanut Sauce",
+      "kungpaosoße": "Kung Pao Sauce",
+      "süß-sauersoße": "Sweet & Sour Sauce"
+    }
+  },
+  "legend": {
+    "badge": "Legend",
+    "allergen": "Allergens",
+    "additives": "Additives",
+    "note": "If you have questions, please contact our team – we are happy to advise you.",
+    "labels": {
+      "title": "Labels",
+      "vegan": "Vegetarian",
+      "spicy": "Spicy"
+    }
+  },
+  "payments": {
+    "badge": "Payment",
+    "title": "Popular methods in Germany",
+    "note": "Cashless payments from €20 (American Express not accepted)",
+    "ecCard": "Popular debit card in Germany"
+  },
+  "footer": {
+    "address": "Address",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "tagline": "Asian food with heart",
+    "note": "Freshly cooked dishes, natural ingredients and attentive service – every day.",
+    "copyright": "All rights reserved."
+  }
+}
