@@ -174,6 +174,7 @@ const friedNoodleOptions = [
   { code: '123', label: 'mit knusprigem Hühnerfleisch', price: '14.50€', ...codes('a 4') },
   { code: '124', label: 'mit Rindfleisch', price: '14.50€' },
   { code: '125', label: 'mit knuspriger Ente', price: '15.50€', ...codes('a 4') },
+  { code: '126', label: 'mit Garnelen', price: '16.00€', ...codes('k') },
   { code: '127', label: 'Bami Goreng mit Huhn & Rind im Curry', price: '14.50€', tags: ['spicy'] },
 ]
 
@@ -184,6 +185,7 @@ const friedRiceOptions = [
   { code: '133', label: 'mit knusprigem Hühnerfleisch', price: '14.50€', ...codes('a 4') },
   { code: '134', label: 'mit Rindfleisch', price: '14.50€', ...codes('a') },
   { code: '135', label: 'mit knuspriger Ente', price: '15.50€', ...codes('a 4') },
+  { code: '136', label: 'mit Garnelen', price: '16.00€', ...codes('a k') },
   { code: '137', label: 'Nasi Goreng mit Huhn & Rind im Curry', price: '14.50€', tags: ['spicy'] },
 ]
 
@@ -195,6 +197,7 @@ const udonCurryOptions = [
   { code: '144', label: 'mit knusprigem Hühnerfleisch', price: '15.50€', ...codes('a 4') },
   { code: '145', label: 'mit Rindfleisch', price: '15.50€' },
   { code: '146', label: 'mit knuspriger Ente', price: '16.50€', ...codes('a 4') },
+  { code: '147', label: 'mit Garnelen', price: '17.00€', ...codes('k') },
 ]
 
 const udonFriedOptions = [
@@ -204,6 +207,7 @@ const udonFriedOptions = [
   { code: '153', label: 'mit knusprigem Hühnerfleisch', price: '14.50€', ...codes('a 4') },
   { code: '154', label: 'mit Rindfleisch', price: '14.50€' },
   { code: '155', label: 'mit knuspriger Ente', price: '15.50€', ...codes('a 4') },
+  { code: '156', label: 'mit Garnelen', price: '16.00€', ...codes('k') },
 ]
 
 const riceNoodleOptions = [
@@ -213,6 +217,7 @@ const riceNoodleOptions = [
   { code: '163', label: 'mit knusprigem Hühnerfleisch', price: '14.50€', ...codes('a 4') },
   { code: '164', label: 'mit Rindfleisch', price: '14.50€' },
   { code: '165', label: 'mit knuspriger Ente', price: '15.50€', ...codes('a 4') },
+  { code: '166', label: 'mit Garnelen', price: '16.00€', ...codes('k') },
 ]
 
 const curryRiceNoodleOptions = [
@@ -229,13 +234,13 @@ export const menuSections = [
   {
     id: 'vorspeise',
     title: 'Vorspeise',
-    description: 'Suppen, Salate und kleine Snacks – perfekt zum Start.',
+    description: '',
     image: sectionImages.vorspeisen,
     items: [
       {
         code: '01',
         name: 'Gemüse Suppe',
-        description: 'Klare Gemüsebrühe mit saisonalem Gemüse',
+        description: 'mit versch. Gemüse',
         price: '4.50€',
         tags: ['vegan'],
         ...codes('4'),
@@ -243,7 +248,7 @@ export const menuSections = [
       {
         code: '02',
         name: 'Tofu Suppe mit Kokosmilch',
-        description: 'Cremige Kokosbasis, Tofu und buntes Gemüse',
+        description: 'mit Kokosmilch, versch. Gemüse',
         price: '5.50€',
         tags: ['vegan'],
         ...codes('f g'),
@@ -251,35 +256,35 @@ export const menuSections = [
       {
         code: '03',
         name: 'Garnelen Suppe',
-        description: 'Aromatische Brühe mit Garnelen und Gemüse',
+        description: 'mit versch. Gemüse',
         price: '6.00€',
         ...codes('4'),
       },
       {
         code: '04',
         name: 'Lachs Suppe',
-        description: 'Mild geräucherter Lachs mit frischem Gemüse',
+        description: 'mit versch. Gemüse',
         price: '6.00€',
         ...codes('d 4'),
       },
       {
         code: '05',
         name: 'Ramen Nudelsuppe',
-        description: 'Hühnerfleisch, Eiernudeln und Gemüse in würziger Brühe',
+        description: 'mit Hühnerfleisch und versch. Gemüse',
         price: '5.50€',
         ...codes('a 4'),
       },
       {
         code: '06',
         name: 'Kokosmilchsuppe mit Gyoza',
-        description: 'Seidige Kokosbrühe mit Gyoza und Gemüse',
+        description: 'mit Gyoza und versch. Gemüse',
         price: '6.00€',
         ...codes('a g'),
       },
       {
         code: '07',
         name: 'Peking Suppe',
-        description: 'Sauer-scharfe Suppe mit Huhn, Gemüse und Ei',
+        description: 'Sauer-Scharf-Suppe mit Hühnerfleisch, Gemüse u. Ei',
         price: '5.50€',
         tags: ['spicy'],
         ...codes('c 4'),
@@ -287,7 +292,7 @@ export const menuSections = [
       {
         code: '11',
         name: 'Avocado Salat',
-        description: 'Gemischter Salat mit Avocado und hausgemachter Soße',
+        description: 'mit gemischtem Salat und hausgemachter Soße',
         price: '8.50€',
         tags: ['vegan'],
         ...codes('a i'),
@@ -295,14 +300,14 @@ export const menuSections = [
       {
         code: '12',
         name: 'Mango Salat',
-        description: 'Frischer Mangosalat mit Huhn, Kräutern und Erdnüssen',
+        description: 'mit gemischtem Salat, Hühnerfleisch, Erdnuss, Kräuter, und mit hausgem. Soße',
         price: '9.50€',
         ...codes('a e'),
       },
       {
         code: '13',
         name: 'Lachs Salat',
-        description: 'Gemischter Salat mit knusprigem Lachs & Teriyaki',
+        description: 'Gemischte Salat mit frittierte Lachs und Teriyaki Soße',
         price: '15.00€',
         ...codes('a d i'),
       },
@@ -317,28 +322,28 @@ export const menuSections = [
       {
         code: '21',
         name: 'Sommerrollen mit Tofu (2 Stk.)',
-        description: 'Reispapierrollen mit Tofu, Kräutern & Fischsoße',
+        description: 'gefüllt mit Koriander, Salat, Reisnudeln umhüllt mit Reispapier, und Fischsoße',
         price: '6.00€',
         ...codes('d f i'),
       },
       {
         code: '22',
-        name: 'Sommerrollen mit Garnelen & Huhn (2 Stk.)',
-        description: 'Kombination aus Garnelen, Hühnerfleisch und Kräutern',
+        name: 'Sommerrollen mit Garnelen und Hühnerfleisch (2 Stk.)',
+        description: 'gefüllt mit Koriander, Salat, Reisnudeln umhüllt mit Reispapier, und Fischsoße',
         price: '6.50€',
         ...codes('d i k'),
       },
       {
         code: '23',
         name: 'Knusprige Frühlingsrollen (2 Stk.)',
-        description: 'Gefüllt mit Huhn, Glasnudeln und Gemüse',
+        description: 'gefüllt mit Hühnerfleisch, Glasnudeln und versch. Gemüse',
         price: '6.50€',
         ...codes('a c d 4'),
       },
       {
         code: '24',
-        name: 'Vegane Mini-Frühlingsrollen (8 Stk.)',
-        description: 'Knusprige Rollen mit Gemüsefüllung',
+        name: 'Veg. Mini-Frühlingsrolle (8 Stk.)',
+        description: '',
         price: '4.50€',
         tags: ['vegan'],
         ...codes('a 4'),
@@ -346,21 +351,21 @@ export const menuSections = [
       {
         code: '25',
         name: 'Gyoza (5 Stk.)',
-        description: 'Japanische Teigtaschen mit Huhn und Gemüse',
+        description: 'japanische Teigtaschen mit Hühnerfleisch und Gemüse',
         price: '6.00€',
         ...codes('a f'),
       },
       {
         code: '26',
         name: 'Yakitori (3 Stk.)',
-        description: 'Japanische Hähnchenspieße mit Teriyaki',
+        description: 'japanische Hähnchenspieße',
         price: '6.00€',
         ...codes('a i'),
       },
       {
         code: '27',
         name: 'Gebackene Garnelen (3 Stk.)',
-        description: 'Knusprig frittiert mit Dip',
+        description: '',
         price: '6.50€',
         ...codes('a k 3'),
       },
@@ -381,8 +386,8 @@ export const menuSections = [
     items: [
       {
         code: '40-45',
-        name: 'Tofu Selection',
-        description: 'Wähle deine Lieblingssoße für unser veganes Wok-Gericht.',
+        name: 'Tofu',
+        description: 'Tofu mit buntem Gemüse im Wok gebraten (mit Reis)',
         price: '11.00€',
         tags: ['vegan'],
         variations: tofuSauceOptions,
@@ -391,23 +396,23 @@ export const menuSections = [
       {
         code: '50-55',
         name: 'Hühnerfleisch',
-        description: 'Klassisches Wok-Gericht mit leichter Marinade.',
+        description: 'Hühnerfleisch mit buntem Gemüse im Wok gebraten (mit Reis)',
         price: '12.00€',
         variations: chickenSauceOptions,
         ...codes('i'),
       },
       {
         code: '60-69',
-        name: 'Paniertes Hühnerfleisch',
-        description: 'Knusprig paniert, außen kross – innen saftig.',
+        name: 'Hühnerbrust paniert',
+        description: 'Hühnerbrust paniert mit buntem Gemüse im Wok gebraten (mit Reis)',
         price: '14.50€',
         variations: breadedChickenOptions,
         ...codes('a i 4'),
       },
       {
         code: '70-79',
-        name: 'Knuspriges Hühnerfleisch',
-        description: 'Im Wok geschwenkt und extra kross.',
+        name: 'Knusprige Hühnerfleisch',
+        description: 'Knusprige Hühnerfleisch mit buntem Gemüse im Wok gebraten (mit Reis)',
         price: '14.50€',
         variations: crispyChickenOptions,
         ...codes('a i 4'),
@@ -415,7 +420,7 @@ export const menuSections = [
       {
         code: '80-89',
         name: 'Knusprige Ente',
-        description: 'Außen kross, innen zart – perfekt mit fruchtigen Soßen.',
+        description: 'Knusprige Ente mit buntem Gemüse im Wok gebraten (mit Reis)',
         price: '15.50€',
         variations: duckSauceOptions,
         ...codes('a i 4'),
@@ -423,7 +428,7 @@ export const menuSections = [
       {
         code: '90-95',
         name: 'Rindfleisch',
-        description: 'Fein geschnittenes Rindfleisch im Wok',
+        description: 'Rindfleisch mit buntem Gemüse im Wok gebraten (mit Reis)',
         price: '14.50€',
         variations: beefSauceOptions,
         ...codes('i'),
@@ -431,15 +436,15 @@ export const menuSections = [
       {
         code: '100-105',
         name: 'Garnelen',
-        description: 'Saftige Garnelen mit knackigem Gemüse',
+        description: 'Garnelen mit buntem Gemüse im Wok gebraten (mit Reis)',
         price: '16.00€',
         variations: shrimpSauceOptions,
         ...codes('i k'),
       },
       {
         code: '110-112',
-        name: 'Bún Signature',
-        description: 'Frische Kräuter, knackiger Salat und knusprige Toppings.',
+        name: 'Reisnudeln',
+        description: 'Reisnudeln mit gemischtem Salat, Nüssen, Kräutern und Fischsoße',
         // price: 'ab 14.50€',
         variations: noodleBowlOptions,
         ...codes('d e i'),
@@ -447,7 +452,7 @@ export const menuSections = [
       {
         code: '120-127',
         name: 'Gebratene Nudeln',
-        description: 'Individuell kombinierbar – von Gemüse bis Garnelen.',
+        description: 'Gebratene Nudeln mit buntem Gemüse und Ei',
         // price: 'ab 9.50€',
         variations: friedNoodleOptions,
         ...codes('a c i 4'),
@@ -455,15 +460,15 @@ export const menuSections = [
       {
         code: '130-137',
         name: 'Gebratener Reis',
-        description: 'Beliebt als Hauptgericht oder Beilage.',
+        description: 'Gebratener Reis mit buntem Gemüse und Ei',
         // price: 'ab 9.50€',
         variations: friedRiceOptions,
         ...codes('c i 4'),
       },
       {
         code: '140-147',
-        name: 'Udon Curry Bowl',
-        description: 'Wärmende Curry-Basis mit deiner Lieblingsprotein.',
+        name: 'Udon Nudeln',
+        description: 'Udon Nudeln mit buntem Gemüse in Currysoße',
         // price: 'ab 11.00€',
         variations: udonCurryOptions,
         tags: ['spicy'],
@@ -471,24 +476,24 @@ export const menuSections = [
       },
       {
         code: '150-156',
-        name: 'Gebratene Udon',
-        description: 'Herzhaft und sättigend.',
+        name: 'Udon Nudeln',
+        description: 'Udon Nudeln gebraten mit buntem Gemüse und Ei',
         // price: 'ab 10.50€',
         variations: udonFriedOptions,
         ...codes('a c i 4'),
       },
       {
         code: '160-166',
-        name: 'Gebratene Reisbandnudeln',
-        description: 'Wähle deine Protein-Begleitung.',
+        name: 'Reisbandnudeln',
+        description: 'Reisbandnudeln gebraten mit buntem Gemüse und Ei',
         // price: 'ab 10.50€',
         variations: riceNoodleOptions,
         ...codes('a c e i 4'),
       },
       {
         code: '170-176',
-        name: 'Reisnudeln mit Currypaste',
-        description: 'Currypaste bringt feine Schärfe ins Spiel.',
+        name: 'Gebratene Reisnudeln',
+        description: 'Gebratene Reisnudeln mit Currypaste, buntem Gemüse und Ei',
         // price: 'ab 10.50€',
         variations: curryRiceNoodleOptions,
         tags: ['spicy'],
@@ -497,13 +502,13 @@ export const menuSections = [
       {
         code: '180',
         name: 'Pho mit Tofu',
-        description: 'Leicht & aromatisch',
+        description: '',
         price: '16.50€',
         tags: ['vegan'],
         ...codes('f'),
       },
-      { code: '181', name: 'Pho mit Hühnerfleisch', description: 'Klassisch & wärmend', price: '17.50€', ...codes('d 4') },
-      { code: '182', name: 'Pho mit Rindfleisch', description: 'Intensiv & herzhaft', price: '18.50€', ...codes('d 4') },
+      { code: '181', name: 'Pho mit Hühnerfleisch', description: '', price: '17.50€', ...codes('d 4') },
+      { code: '182', name: 'Pho mit Rindfleisch', description: '', price: '18.50€', ...codes('d 4') },
     ],
   },
   {
@@ -514,22 +519,22 @@ export const menuSections = [
     items: [
       {
         code: '1000',
-        name: 'Gebackene Banane mit Honig',
+        name: 'Gebackene Banane',
         description: 'mit Honig',
         price: '4.50€',
         ...codes('a i'),
       },
       {
         code: '1001',
-        name: 'Knusprige Sesam-Bällchen (4 Stk.)',
-        description: 'mit Nüssen und Bohnen',
+        name: 'Knuspriger Sesam Bällchen',
+        description: 'mit Nüssen und Bohnen (4 Stk.)',
         price: '4.50€',
         ...codes('a i'),
       },
       {
         code: '1002',
-        name: 'Mochi Eis (2 Stk.)',
-        description: '',
+        name: 'Mochi Eis',
+        description: '(2 Stk.)',
         price: '5.50€',
         ...codes('g'),
       },
@@ -544,7 +549,7 @@ export const menuSections = [
       {
         code: 'EX',
         name: 'Beilagen & Soßen',
-        description: 'Erweitere dein Menü mit Reis, gebratenen Nudeln oder Signature-Soßen.',
+        description: 'Gebrat. Reis/Nudel (statt Reis als Beilage zu den Gerichten Nr. 40 bis Nr. 105)',
         extrasList: [
           { label: 'Reis', price: '2.50€' },
           { label: 'Gebratener Reis / Nudeln', price: '4.00€', ...codes('a c i 4') },
@@ -553,6 +558,7 @@ export const menuSections = [
           { label: 'Chop Suey / Kung Pao Soße', price: '3.00€', ...codes('a 4') },
           { label: 'Curry Soße', price: '3.00€', ...codes('g') },
           { label: 'Mango Soße', price: '3.00€', ...codes('g') },
+          { label: 'Erdnuss Soße', price: '3.00€', ...codes('a g e') },
         ],
       },
     ],

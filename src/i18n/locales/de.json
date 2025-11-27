@@ -51,20 +51,94 @@
     "sections": {
       "vorspeise": {
         "title": "Vorspeise",
-        "description": "Suppen, Salate und kleine Snacks – perfekt zum Start."
+        "description": ""
       },
       "hauptgerichte": {
         "title": "Hauptgerichte",
-        "description": "Wok-Klassiker, Nudelgerichte und Phở – unsere Hauptgerichte."
+        "description": ""
       },
       "dessert": {
         "title": "Dessert",
-        "description": "Süßer Abschluss nach vietnamesischer Art."
+        "description": ""
       },
       "extras": {
-        "title": "Extras & Soßen",
-        "description": "Perfekt zum Kombinieren oder als Beilage."
+        "title": "Extras",
+        "description": ""
       }
+    },
+    "items": {
+      "01": { "name": "Gemüse Suppe", "description": "mit versch. Gemüse" },
+      "02": { "name": "Tofu Suppe mit Kokosmilch", "description": "mit Kokosmilch, versch. Gemüse" },
+      "03": { "name": "Garnelen Suppe", "description": "mit versch. Gemüse" },
+      "04": { "name": "Lachs Suppe", "description": "mit versch. Gemüse" },
+      "05": { "name": "Ramen Nudelsuppe", "description": "mit Hühnerfleisch und versch. Gemüse" },
+      "06": { "name": "Kokosmilchsuppe mit Gyoza", "description": "mit Gyoza und versch. Gemüse" },
+      "07": { "name": "Peking Suppe", "description": "Sauer-Scharf-Suppe mit Hühnerfleisch, Gemüse u. Ei" },
+      "11": { "name": "Avocado Salat", "description": "mit gemischtem Salat und hausgemachter Soße" },
+      "12": { "name": "Mango Salat", "description": "mit gemischtem Salat, Hühnerfleisch, Erdnuss, Kräuter, und mit hausgem. Soße" },
+      "13": { "name": "Lachs Salat", "description": "Gemischte Salat mit frittierte Lachs und Teriyaki Soße" },
+      "20": { "name": "Edamame", "description": "Japanische Bohnen mit Meersalz" },
+      "21": { "name": "Sommerrollen mit Tofu (2 Stk.)", "description": "gefüllt mit Koriander, Salat, Reisnudeln umhüllt mit Reispapier, und Fischsoße" },
+      "22": { "name": "Sommerrollen mit Garnelen und Hühnerfleisch (2 Stk.)", "description": "gefüllt mit Koriander, Salat, Reisnudeln umhüllt mit Reispapier, und Fischsoße" },
+      "23": { "name": "Knusprige Frühlingsrollen (2 Stk.)", "description": "gefüllt mit Hühnerfleisch, Glasnudeln und versch. Gemüse" },
+      "24": { "name": "Veg. Mini-Frühlingsrolle (8 Stk.)", "description": "" },
+      "25": { "name": "Gyoza (5 Stk.)", "description": "japanische Teigtaschen mit Hühnerfleisch und Gemüse" },
+      "26": { "name": "Yakitori (3 Stk.)", "description": "japanische Hähnchenspieße" },
+      "27": { "name": "Gebackene Garnelen (3 Stk.)", "description": "" },
+      "28": { "name": "Keiko (5 Stk.)", "description": "Gedämpfte Teigtaschen mit Garnelenfüllung" },
+      "40-45": { "name": "Tofu", "description": "Tofu mit buntem Gemüse im Wok gebraten (mit Reis)" },
+      "50-55": { "name": "Hühnerfleisch", "description": "Hühnerfleisch mit buntem Gemüse im Wok gebraten (mit Reis)" },
+      "60-69": { "name": "Hühnerbrust paniert", "description": "Hühnerbrust paniert mit buntem Gemüse im Wok gebraten (mit Reis)" },
+      "70-79": { "name": "Knusprige Hühnerfleisch", "description": "Knusprige Hühnerfleisch mit buntem Gemüse im Wok gebraten (mit Reis)" },
+      "80-89": { "name": "Knusprige Ente", "description": "Knusprige Ente mit buntem Gemüse im Wok gebraten (mit Reis)" },
+      "90-95": { "name": "Rindfleisch", "description": "Rindfleisch mit buntem Gemüse im Wok gebraten (mit Reis)" },
+      "100-105": { "name": "Garnelen", "description": "Garnelen mit buntem Gemüse im Wok gebraten (mit Reis)" },
+      "110-112": { "name": "Reisnudeln", "description": "Reisnudeln mit gemischtem Salat, Nüssen, Kräutern und Fischsoße" },
+      "120-127": { "name": "Gebratene Nudeln", "description": "Gebratene Nudeln mit buntem Gemüse und Ei" },
+      "130-137": { "name": "Gebratener Reis", "description": "Gebratener Reis mit buntem Gemüse und Ei" },
+      "140-147": { "name": "Udon Nudeln", "description": "Udon Nudeln mit buntem Gemüse in Currysoße" },
+      "150-156": { "name": "Udon Nudeln", "description": "Udon Nudeln gebraten mit buntem Gemüse und Ei" },
+      "160-166": { "name": "Reisbandnudeln", "description": "Reisbandnudeln gebraten mit buntem Gemüse und Ei" },
+      "170-176": { "name": "Gebratene Reisnudeln", "description": "Gebratene Reisnudeln mit Currypaste, buntem Gemüse und Ei" },
+      "180": { "name": "Pho mit Tofu", "description": "" },
+      "181": { "name": "Pho mit Hühnerfleisch", "description": "" },
+      "182": { "name": "Pho mit Rindfleisch", "description": "" },
+      "1000": { "name": "Gebackene Banane", "description": "mit Honig" },
+      "1001": { "name": "Knuspriger Sesam Bällchen", "description": "mit Nüssen und Bohnen (4 Stk.)" },
+      "1002": { "name": "Mochi Eis", "description": "(2 Stk.)" },
+      "EX": { "name": "Beilagen & Soßen", "description": "Gebrat. Reis/Nudel (statt Reis als Beilage zu den Gerichten Nr. 40 bis Nr. 105)" },
+      "extras": {
+        "reis": "Reis",
+        "gebratenerreis/nudeln": "Gebratener Reis / Nudeln",
+        "sweetchilisoße": "Sweet Chili Soße",
+        "teriyakisoße": "Teriyaki Soße",
+        "chopsuey/kungpaosoße": "Chop Suey / Kung Pao Soße",
+        "currysoße": "Curry Soße",
+        "mangosoße": "Mango Soße",
+        "erdnusssoße": "Erdnuss Soße"
+      }
+    },
+    "variations": {
+      "mitgemüsen": "mit Gemüsen",
+      "mithühnerfleisch": "mit Hühnerfleisch",
+      "mitpaniertemhühnerfleisch": "mit paniertem Hühnerfleisch",
+      "mitknusprigemhühnerfleisch": "mit knusprigem Hühnerfleisch",
+      "mitrindfleisch": "mit Rindfleisch",
+      "mitknusprigerente": "mit knuspriger Ente",
+      "mitgarnelen": "mit Garnelen",
+      "mittofu": "mit Tofu",
+      "bamigorengmithuhn&rindimcurry": "Bami Goreng mit Huhn & Rind im Curry",
+      "nasigorengmithuhn&rindimcurry": "Nasi Goreng mit Huhn & Rind im Curry",
+      "gebratenertofugemüselemongras&knoblauch": "mit gebr. Tofu, Gemüse, Lemongras & Knoblauch",
+      "knusprigefrühlingsrollen": "Knusprige Frühlingsrollen",
+      "rindfleischgemüselemongras&knoblauch": "Rindfleisch, Gemüse, Lemongras & Knoblauch",
+      "chopsueysoße": "Chop Suey Soße",
+      "rotethaicurrysoße": "Rote Thai Currysoße",
+      "grünethaicurrysoße": "Grüne Thai Currysoße",
+      "mangosoße": "Mango Soße",
+      "erdnusssoße": "Erdnuss Soße",
+      "kungpaosoße": "Kung Pao Soße",
+      "süß-sauersoße": "Süß-Sauer Soße"
     }
   },
   "legend": {
