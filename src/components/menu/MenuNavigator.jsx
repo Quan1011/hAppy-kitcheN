@@ -5,7 +5,10 @@ const MenuNavigator = ({ sections, activeSection, onSelect }) => {
   const { t } = useTranslation()
 
   const handleSelect = id => {
-    if (activeSection === id) {
+    const isSameSection = activeSection === id
+    const wasShowingAll = activeSection === 'all'
+
+    if (isSameSection) {
       onSelect('all')
       const resetTarget = document.getElementById('menu-start')
       if (resetTarget) {
@@ -13,7 +16,15 @@ const MenuNavigator = ({ sections, activeSection, onSelect }) => {
       }
       return
     }
+
     onSelect(id)
+
+    if (wasShowingAll) {
+      const menuStart = document.getElementById('menu-start')
+      menuStart?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      return
+    }
+
     const target = document.getElementById(id)
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' })

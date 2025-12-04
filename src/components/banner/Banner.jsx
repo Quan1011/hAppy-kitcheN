@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import bannerImage from '../../image/banner.png'
+import bannerImage from '../../image/182.jpg'
 
 const Banner = () => {
   const { t } = useTranslation()
@@ -25,7 +25,7 @@ const Banner = () => {
           <p className='text-2xl font-bold uppercase tracking-[0.5em] text-[#a6f09d] mb-4 drop-shadow'>{t('hero.badge')}</p>
           <h1 className='text-3xl md:text-5xl font-bold leading-tight text-white drop-shadow-lg'>{t('hero.title')}</h1>
           {/* <p className='text-stone-100 mt-4 text-lg drop-shadow-md'>{t('hero.description')}</p> */}
-          <div className='mt-6 bg-white/85 text-[#123321] border border-[#d7ead6] rounded-2xl p-5 shadow-[0_10px_30px_rgba(17,45,25,0.2)] backdrop-blur-sm'>
+          <div className='mt-6 bg-white/85 text-[#123321] border border-[#d7ead6] rounded-2xl p-5 shadow-[0_10px_30px_rgba(17,45,25,0.2)]'>
             <p className='text-xs text-[#4a6155] mt-1'>{t('hero.notice.effective')}</p>
             <p className='text-xs text-[#4a6155] mt-2'>{t('hero.notice.extra')}</p>
           </div>

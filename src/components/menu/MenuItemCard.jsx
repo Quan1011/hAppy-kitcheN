@@ -2,7 +2,11 @@ import React, { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { allergenLegend, additiveLegend } from '../../data/menuData'
 
-const defaultImage = 'https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=900&q=80'
+// Tự động lấy toàn bộ ảnh .jpg trong thư mục image để map theo mã món
+const dishImages = import.meta.glob('../../image/*.jpg', {
+  eager: true,
+  import: 'default',
+})
 
 const tagMetaConfig = {
   vegan: { icon: '🥬', className: 'bg-[#dff6dd] text-[#1f4b33] border-[#b4deb5]' },
@@ -39,7 +43,25 @@ const MenuItemCard = ({ item, fallbackImage }) => {
 
   const tagList = item.tags ?? []
   const hasVariations = Array.isArray(item.variations) && item.variations.length > 0
-  const imageSrc = item.image ?? fallbackImage ?? defaultImage
+
+  // ưu tiên: ảnh gắn trực tiếp cho item > ảnh theo mã món > ảnh fallback của section
+  const codeImageKey = item.code ? `../../image/${item.code}.jpg` : null
+  const codeImage = codeImageKey ? dishImages[codeImageKey] : null
+
+  let variationImage = null
+  if (!item.image && !codeImage && Array.isArray(item.variations)) {
+    for (const variation of item.variations) {
+      if (!variation?.code) continue
+      const variationKey = `../../image/${variation.code}.jpg`
+      if (dishImages[variationKey]) {
+        variationImage = dishImages[variationKey]
+        break
+      }
+    }
+  }
+
+  const imageSrc = item.image ?? codeImage ?? variationImage ?? fallbackImage ?? null
+  const hasImage = Boolean(imageSrc)
 
   // Get translated name and description
   const itemKey = `menu.items.${item.code}`
@@ -77,20 +99,22 @@ const MenuItemCard = ({ item, fallbackImage }) => {
   return (
     <article className='group bg-white border border-[#d7ead6] rounded-3xl shadow-[0_15px_40px_rgba(37,78,50,0.08)] hover:-translate-y-1 hover:shadow-[0_25px_55px_rgba(37,78,50,0.12)] transition-all duration-300 flex flex-col overflow-hidden'>
       <div className='flex flex-row gap-4 p-4 md:gap-6 md:p-5 border-b border-[#e2f2e2] items-start'>
-        <figure className='relative w-33 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 shrink-0 rounded-2xl overflow-hidden'>
-          <img
-            src={imageSrc}
-            alt={translatedName}
-            loading='lazy'
-            className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
-          />
-          <div className='absolute inset-0 bg-black/15' />
-          {item.code && (
-            <span className='absolute top-3 left-3 text-[11px] uppercase tracking-[0.4em] text-white bg-black/45 backdrop-blur-sm px-3 py-1 rounded-full'>
-              #{item.code}
-            </span>
-          )}
-        </figure>
+        {hasImage && (
+          <figure className='relative w-33 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 shrink-0 rounded-2xl overflow-hidden'>
+            <img
+              src={imageSrc}
+              alt={translatedName}
+              loading='lazy'
+              className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
+            />
+            <div className='absolute inset-0 bg-black/15' />
+            {item.code && (
+              <span className='absolute top-3 left-3 text-[11px] uppercase tracking-[0.4em] text-white bg-black/45 backdrop-blur-sm px-3 py-1 rounded-full'>
+                #{item.code}
+              </span>
+            )}
+          </figure>
+        )}
         <div className='flex-1 space-y-3 text-[#123321]'>
           <div className='flex flex-col gap-2'>
             <div className='flex flex-wrap items-start justify-between gap-3'>
