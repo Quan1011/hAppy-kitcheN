@@ -18,6 +18,7 @@
       "daily": "Täglich",
       "weekday": "Montag – Freitag",
       "wednesday": "Mittwoch",
+      "closed": "Ruhetag",
       "saturday": "Samstag",
       "sunday": "Sonntag",
       "holiday": "Feiertag"
@@ -109,36 +110,40 @@
       "EX": { "name": "Beilagen & Soßen", "description": "" },
       "extras": {
         "reis": "Reis",
-        "gebratenerreis/nudeln": "Gebrat. Reis/Nudel",
-        "sweetchilisoße": "Sweet Chili Soße",
-        "teriyakisoße": "Teriyaki Soße",
-        "chopsuey/kungpaosoße": "Chop Suey/Kung Pao Soße",
-        "currysoße": "Curry Soße",
-        "mangosoße": "Mango Soße",
-        "erdnusssoße": "Erdnuss Soße"
+        "gebratreisnudel": "Gebrat. Reis/Nudel",
+        "gebratreisnudel_description": "statt Reis als Beilage zu den Gerichten Nr. 40 bis Nr. 105",
+        "sweetchilisosse": "Sweet Chili Soße",
+        "teriyakisosse": "Teriyaki Soße",
+        "chopsueykungpaososse": "Chop Suey/Kung Pao Soße",
+        "currysosse": "Curry Soße",
+        "mangososse": "Mango Soße",
+        "erdnusssosse": "Erdnuss Soße"
       }
     },
     "variations": {
-      "mitgemüsen": "mit Gemüsen",
-      "mithühnerfleisch": "mit Hühnerfleisch",
-      "mitpaniertemhühnerfleisch": "mit paniertem Hühnerfleisch",
-      "mitknusprigemhühnerfleisch": "mit knusprigem Hühnerfleisch",
+      "mitgemusen": "mit Gemüsen",
+      "mithuhnerfleisch": "mit Hühnerfleisch",
+      "mitpaniertemhuhnerfleisch": "mit paniertem Hühnerfleisch",
+      "mitknusprigemhuhnerfleisch": "mit knusprigem Hühnerfleisch",
       "mitrindfleisch": "mit Rindfleisch",
       "mitknusprigerente": "mit knuspriger Ente",
       "mitgarnelen": "mit Garnelen",
       "mittofu": "mit Tofu",
-      "bamigorengmithuhn&rindimcurry": "Bami Goreng mit Hühner-, Rindfleisch und Curry",
-      "nasigorengmithuhn&rindimcurry": "Nasi Goreng mit Hühner-, Rindfleisch und Curry",
-      "gebratenertofugemüselemongras&knoblauch": "mit gebr. Tofu, Gemüse, Lemongras und Knoblauch",
-      "knusprigefrühlingsrollen": "mit knusprigen Frühlingsrollen",
-      "rindfleischgemüselemongras&knoblauch": "mit Rindfleisch, Gemüse, Lemongras und Knoblauch",
-      "chopsueysoße": "mit Chop Suey Soße",
-      "rotethaicurrysoße": "mit Roter Thai Currysoße",
-      "grünethaicurrysoße": "mit Grüner Thai Currysoße",
-      "mangosoße": "mit Mango Soße",
-      "erdnusssoße": "mit Erdnuss Soße",
-      "kungpaosoße": "mit Kung Pao Soße",
-      "süß-sauersoße": "mit Süßsauer Soße"
+      "bamigorengmithuhnerrindfleischundcurry": "Bami Goreng mit Hühner-, Rindfleisch und Curry",
+      "nasigorengmithuhnerrindfleischundcurry": "Nasi Goreng mit Hühner-, Rindfleisch und Curry",
+      "mitgebrtofugemuselemongrasundknoblauch": "mit gebr. Tofu, Gemüse, Lemongras und Knoblauch",
+      "mitknusprigenfruhlingsrollen": "mit knusprigen Frühlingsrollen",
+      "mitrindfleischgemuselemongrasundknoblauch": "mit Rindfleisch, Gemüse, Lemongras und Knoblauch",
+      "chopsueysosse": "mit Chop Suey Soße",
+      "roterthaicurrysosse": "mit Roter Thai Currysoße",
+      "grunerthaicurrysosse": "mit Grüner Thai Currysoße",
+      "mangososse": "mit Mango Soße",
+      "erdnusssosse": "mit Erdnuss Soße",
+      "kungpaososse": "mit Kung Pao Soße",
+      "sussauersosse": "mit Süßsauer Soße",
+      "susssauersosse": "mit Süßsauer Soße",
+      "sussauersose": "mit Süßsauer Soße",
+      "susssauersose": "mit Süßsauer Soße"
     }
   },
   "legend": {
@@ -150,6 +155,27 @@
       "title": "Kennzeichnungen",
       "vegan": "Vegetarisch",
       "spicy": "Scharf"
+    },
+    "allergens": {
+      "a": "mit Gluten / Weizen Typ 405",
+      "b": "mit Weichtieren",
+      "c": "mit Eiern",
+      "d": "mit Fisch",
+      "e": "mit Erdnuss",
+      "f": "mit Sojabohnen",
+      "g": "mit Milch",
+      "h": "mit Cashew",
+      "i": "mit Sesam",
+      "k": "mit Krebstieren"
+    },
+    "additivesList": {
+      "1": "mit Farbstoffen",
+      "2": "mit Konservierungsstoffen",
+      "3": "mit Antioxidationsmittel",
+      "4": "mit Geschmacksverstärker",
+      "5": "mit Süßungsmittel",
+      "6": "mit Phenylalaninquelle",
+      "7": "mit Coffein"
     }
   },
   "payments": {

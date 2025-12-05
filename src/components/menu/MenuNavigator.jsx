@@ -49,20 +49,24 @@ const MenuNavigator = ({ sections, activeSection, onSelect }) => {
         </div>
 
         <div className='grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3'>
-          {sections.map(section => (
-            <button
-              key={section.id}
-              type='button'
-              onClick={() => handleSelect(section.id)}
-              className={`px-4 py-2 rounded-2xl border text-sm font-semibold transition-all sm:shrink-0 ${
-                activeSection === section.id
-                  ? 'bg-[#a9dbb0] border-transparent text-[#0d2c1a] shadow-[0_8px_20px_rgba(33,85,47,0.25)]'
-                  : 'bg-transparent border-[#d6ead8] text-[#2d653d] hover:border-[#a9dbb0]'
-              }`}
-            >
-              {section.title}
-            </button>
-          ))}
+          {sections.map(section => {
+            const sectionKey = `menu.sections.${section.id}`
+            const translatedTitle = t(`${sectionKey}.title`, { defaultValue: section.title })
+            return (
+              <button
+                key={section.id}
+                type='button'
+                onClick={() => handleSelect(section.id)}
+                className={`px-4 py-2 rounded-2xl border text-sm font-semibold transition-all sm:shrink-0 ${
+                  activeSection === section.id
+                    ? 'bg-[#a9dbb0] border-transparent text-[#0d2c1a] shadow-[0_8px_20px_rgba(33,85,47,0.25)]'
+                    : 'bg-transparent border-[#d6ead8] text-[#2d653d] hover:border-[#a9dbb0]'
+                }`}
+              >
+                {translatedTitle}
+              </button>
+            )
+          })}
           <button
             type='button'
             onClick={handleScrollToLegend}

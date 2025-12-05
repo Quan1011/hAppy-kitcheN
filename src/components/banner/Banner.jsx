@@ -61,7 +61,7 @@ const Banner = () => {
                 </div>
                 <div className='flex-1 w-full flex flex-col items-center justify-center py-2 px-1'>
                     <span className='text-[10px] sm:text-base font-bold text-black whitespace-nowrap'>
-                        Ruhetag
+                      {t('hero.hours.closed', 'CLOSED DAY - HOURS')}
                     </span>
                 </div>
             </div>
@@ -70,7 +70,7 @@ const Banner = () => {
                 <div className='w-full h-8 sm:h-14 px-1 flex items-center justify-center border-b border-black/80 bg-[#e3f5e1]'>
                     <span className='text-[8px] sm:text-[9px] font-bold uppercase text-black text-center leading-tight break-words'>
                         {t('hero.hours.saturday', 'SATURDAY')} - {t('hero.hours.sunday', 'SUNDAY')}
-                        <br className='block sm:hidden' /> {/* Ngắt dòng trên mobile nếu quá dài */}
+                        <br className='block sm:hidden' />
                         <span className='hidden sm:inline'> - </span>
                         {t('hero.hours.holiday', 'HOLIDAY')}
                     </span>

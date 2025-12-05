@@ -18,6 +18,7 @@
       "daily": "Daily",
       "weekday": "Monday – Friday",
       "wednesday": "Wednesday",
+      "closed": "Closed",
       "saturday": "Saturday",
       "sunday": "Sunday",
       "holiday": "Holiday"
@@ -109,13 +110,14 @@
       "EX": { "name": "Sides & Sauces", "description": "" },
       "extras": {
         "reis": "Rice",
-        "gebratenerreis/nudeln": "Fried rice or fried noodles",
-        "sweetchilisoße": "Sweet Chili Sauce",
-        "teriyakisoße": "Teriyaki Sauce",
-        "chopsuey/kungpaosoße": "Chop suey sauce / Kung pao sauce",
-        "currysoße": "Curry sauce",
-        "mangosoße": "Mango sauce",
-        "erdnusssoße": "Peanut sauce"
+        "gebratreisnudel": "Fried rice or fried noodles",
+        "gebratreisnudel_description": "instead of rice as a side dish for dishes No. 40 to No. 105",
+        "sweetchilisosse": "Sweet Chili Sauce",
+        "teriyakisosse": "Teriyaki Sauce",
+        "chopsueykungpaososse": "Chop suey sauce / Kung pao sauce",
+        "currysosse": "Curry sauce",
+        "mangososse": "Mango sauce",
+        "erdnusssosse": "Peanut sauce"
       }
     },
     "sauces": {
@@ -128,37 +130,61 @@
       "sweetSour": "with sweet and sour sauce"
     },
     "variations": {
-      "mitgemüsen": "with Vegetables",
-      "mithühnerfleisch": "with Chicken",
-      "mitpaniertemhühnerfleisch": "with Breaded Chicken",
-      "mitknusprigemhühnerfleisch": "with Crispy Chicken",
+      "mitgemusen": "with Vegetables",
+      "mithuhnerfleisch": "with Chicken",
+      "mitpaniertemhuhnerfleisch": "with Breaded Chicken",
+      "mitknusprigemhuhnerfleisch": "with Crispy Chicken",
       "mitrindfleisch": "with Beef",
       "mitknusprigerente": "with Crispy Duck",
       "mitgarnelen": "with prawns",
       "mittofu": "with Tofu",
-      "bamigorengmithuhn&rindimcurry": "Bami Goreng with Chicken, Beef and Curry",
-      "nasigorengmithuhn&rindimcurry": "Nasi Goreng with Chicken, Beef and Curry",
-      "gebratenertofugemüselemongras&knoblauch": "with Fried Tofu, Vegetables, Lemongrass & Garlic",
-      "knusprigefrühlingsrollen": "with Crispy Spring Rolls",
-      "rindfleischgemüselemongras&knoblauch": "with Beef, Vegetables, Lemongrass & Garlic",
-      "chopsueysoße": "with Chop Suey Sauce",
-      "rotethaicurrysoße": "with Red Curry Sauce",
-      "grünethaicurrysoße": "with Green Curry Sauce",
-      "mangosoße": "with Mango Sauce",
-      "erdnusssoße": "with Peanut Sauce",
-      "kungpaosoße": "with Kung Pao Sauce",
-      "süß-sauersoße": "with Sweet and Sour Sauce"
+      "bamigorengmithuhnerrindfleischundcurry": "Bami Goreng with Chicken, Beef and Curry",
+      "nasigorengmithuhnerrindfleischundcurry": "Nasi Goreng with Chicken, Beef and Curry",
+      "mitgebrtofugemuselemongrasundknoblauch": "with Fried Tofu, Vegetables, Lemongrass & Garlic",
+      "mitknusprigenfruhlingsrollen": "with Crispy Spring Rolls",
+      "mitrindfleischgemuselemongrasundknoblauch": "with Beef, Vegetables, Lemongrass & Garlic",
+      "chopsueysosse": "with Chop Suey sauce",
+      "roterthaicurrysosse": "with red curry sauce",
+      "grunerthaicurrysosse": "with green curry sauce",
+      "mangososse": "with mango sauce",
+      "erdnusssosse": "with peanut sauce",
+      "kungpaososse": "with kung pao sauce",
+      "sussauersosse": "with sweet and sour sauce",
+      "susssauersosse": "with sweet and sour sauce",
+      "sussauersose": "with sweet and sour sauce",
+      "susssauersose": "with sweet and sour sauce"
     }
   },
   "legend": {
     "badge": "Legend",
-    "allergen": "Allergens",
+    "allergen": "Allergies",
     "additives": "Additives",
     "note": "If you have questions, please contact our team – we are happy to advise you.",
     "labels": {
       "title": "Labels",
       "vegan": "Vegetarian",
       "spicy": "Spicy"
+    },
+    "allergens": {
+      "a": "with Gluten / Wheat Type 405",
+      "b": "with Shellfish / Mollusks",
+      "c": "with Eggs",
+      "d": "with Fish",
+      "e": "with Peanuts",
+      "f": "with Soybeans",
+      "g": "with Milk",
+      "h": "with Cashew",
+      "i": "with Sesame",
+      "k": "with Crustaceans"
+    },
+    "additivesList": {
+      "1": "with Colorants",
+      "2": "with Preservatives",
+      "3": "with Antioxidants",
+      "4": "with Flavor Enhancers",
+      "5": "with Sweeteners",
+      "6": "with Phenylalanine Source",
+      "7": "with Caffeine"
     }
   },
   "payments": {

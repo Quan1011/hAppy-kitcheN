@@ -13,16 +13,20 @@ const tagMetaConfig = {
   spicy: { icon: '🌶️', className: 'bg-[#ffe1db] text-[#7b2b23] border-[#ffbfb3]' },
 }
 
-const getCodeBadges = (codesArray = [], legend = {}) =>
-  (codesArray ?? []).map(code => (
-    <span
-      key={code}
-      className='text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full border border-[#cfe6d2] text-[#1f4b33] bg-[#f5fbf3]'
-      title={legend[code] ?? code.toUpperCase()}
-    >
-      {code.toUpperCase()}
-    </span>
-  ))
+const getCodeBadges = (codesArray = [], legend = {}, t, isAdditive = false) =>
+  (codesArray ?? []).map(code => {
+    const translationKey = isAdditive ? `legend.additivesList.${code}` : `legend.allergens.${code}`
+    const translatedLabel = t ? t(translationKey, { defaultValue: legend[code] ?? code.toUpperCase() }) : (legend[code] ?? code.toUpperCase())
+    return (
+      <span
+        key={code}
+        className='text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full border border-[#cfe6d2] text-[#1f4b33] bg-[#f5fbf3]'
+        title={translatedLabel}
+      >
+        {code.toUpperCase()}
+      </span>
+    )
+  })
 
 const splitParenthetical = text => {
   if (!text) return { main: '', paren: '' }
@@ -84,8 +88,8 @@ const MenuItemCard = ({ item, fallbackImage }) => {
       )
     })
     const codeChips = [
-      ...getCodeBadges(allergens, allergenLegend),
-      ...getCodeBadges(additives, additiveLegend),
+      ...getCodeBadges(allergens, allergenLegend, t, false),
+      ...getCodeBadges(additives, additiveLegend, t, true),
     ]
     const combined = [...tagChips.filter(Boolean), ...codeChips]
     if (combined.length === 0) return null
@@ -121,7 +125,7 @@ const MenuItemCard = ({ item, fallbackImage }) => {
               <div>
                 <h3 className='text-xl font-semibold text-[#0f2b18]'>
                   {nameParts.main}
-                  {nameParts.paren && <span className='whitespace-nowrap ml-1'>{nameParts.paren}</span>}
+                  {nameParts.paren && <span className='inline-block max-w-full break-words whitespace-normal ml-1 text-gray-500'>{nameParts.paren}</span>}
                 </h3>
                 {translatedDescription && <p className='text-sm text-[#4a6155] mt-1'>{translatedDescription}</p>}
               </div>
@@ -177,15 +181,22 @@ const MenuItemCard = ({ item, fallbackImage }) => {
                     className='flex flex-col gap-2 text-sm text-[#1f3c29] bg-[#f5fbf3] border border-[#dfeee0] rounded-xl px-3 py-2'
                   >
                     {isSauceOption ? (
-                      <div className='flex flex-wrap items-center gap-2 w-full'>
-                        <span className='text-sm font-semibold text-[#123321]'>
-                          {variation.code}{' '}
-                          <span className='text-xs font-normal text-[#4d6654]'>– {translatedVariationLabel}</span>
+                      <div className='flex flex-wrap items-baseline justify-between gap-x-2 gap-y-1 w-full'>
+                      {/* Phần bên Trái: Bỏ truncate, cho phép xuống dòng thoải mái */}
+                      <span className='text-sm font-semibold text-[#123321]'>
+                        {variation.code}{' '}
+                        <span className='text-xs font-normal text-[#4d6654]'>
+                          – {translatedVariationLabel}
                         </span>
-                        {variationInlineInfo && (
-                          <div className='flex-1 flex justify-end'>{variationInlineInfo}</div>
-                        )}
-                      </div>
+                      </span>
+                    
+                      {/* Phần bên Phải: Thêm ml-auto */}
+                      {variationInlineInfo && (
+                        <div className='ml-auto flex justify-end shrink-0'>
+                          {variationInlineInfo}
+                        </div>
+                      )}
+                    </div>
                     ) : (
                       <>
                         <div className='flex flex-wrap items-center gap-2'>
@@ -223,6 +234,10 @@ const MenuItemCard = ({ item, fallbackImage }) => {
                 const extraKey = `menu.items.extras.${normalizedExtra}`
                 const translatedExtraLabel = t(extraKey, { defaultValue: extra.label })
                 const extraNameParts = splitParenthetical(translatedExtraLabel)
+                const descriptionKey = `${extraKey}_description`
+                const translatedDescription = extra.description
+                  ? t(descriptionKey, { defaultValue: extra.description })
+                  : null
                 return (
                   <div
                     key={extra.label}
@@ -235,7 +250,7 @@ const MenuItemCard = ({ item, fallbackImage }) => {
                           <span className='whitespace-nowrap ml-1'>{extraNameParts.paren}</span>
                         )}
                       </span>
-                      {extra.description && <span className='text-xs text-[#4a6155]'>{extra.description}</span>}
+                      {translatedDescription && <span className='text-xs text-[#4a6155]'>{translatedDescription}</span>}
                     </span>
                     {(extra.price || extra.tags?.length || extra.allergens?.length || extra.additives?.length) && (
                       <div className='flex flex-wrap items-center justify-between gap-2'>

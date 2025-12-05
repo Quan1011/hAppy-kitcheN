@@ -20,28 +20,34 @@ const MenuLegend = ({ allergenLegend, additiveLegend }) => {
           <div className='space-y-3'>
             <p className='text-xs uppercase tracking-[0.4em] text-[#4a8f5b]'>{t('legend.allergen')}</p>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-[#1d3c27]'>
-              {allergenEntries.map(([key, label]) => (
-                <div key={key} className='flex items-center gap-3 p-3 rounded-2xl bg-[#f6fcf4] border border-[#e2f2e2]'>
-                  <span className='w-10 h-10 rounded-2xl bg-white border border-[#cfe6d2] flex items-center justify-center font-semibold text-[#1f4b33] shadow-inner shrink-0'>
-                    {key.toUpperCase()}
-                  </span>
-                  <p className='leading-snug'>{label}</p>
-                </div>
-              ))}
+              {allergenEntries.map(([key, label]) => {
+                const translatedLabel = t(`legend.allergens.${key}`, { defaultValue: label })
+                return (
+                  <div key={key} className='flex items-center gap-3 p-3 rounded-2xl bg-[#f6fcf4] border border-[#e2f2e2]'>
+                    <span className='w-10 h-10 rounded-2xl bg-white border border-[#cfe6d2] flex items-center justify-center font-semibold text-[#1f4b33] shadow-inner shrink-0'>
+                      {key.toUpperCase()}
+                    </span>
+                    <p className='leading-snug'>{translatedLabel}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
 
           <div className='space-y-3'>
             <p className='text-xs uppercase tracking-[0.4em] text-[#4a8f5b]'>{t('legend.additives')}</p>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-[#1d3c27]'>
-              {additiveEntries.map(([key, label]) => (
-                <div key={key} className='flex items-center gap-3 p-3 rounded-2xl bg-[#f6fcf4] border border-[#e2f2e2]'>
-                  <span className='w-10 h-10 rounded-2xl bg-white border border-[#cfe6d2] flex items-center justify-center font-semibold text-[#1f4b33] shadow-inner shrink-0'>
-                    {key}
-                  </span>
-                  <p className='leading-snug'>{label}</p>
-                </div>
-              ))}
+              {additiveEntries.map(([key, label]) => {
+                const translatedLabel = t(`legend.additivesList.${key}`, { defaultValue: label })
+                return (
+                  <div key={key} className='flex items-center gap-3 p-3 rounded-2xl bg-[#f6fcf4] border border-[#e2f2e2]'>
+                    <span className='w-10 h-10 rounded-2xl bg-white border border-[#cfe6d2] flex items-center justify-center font-semibold text-[#1f4b33] shadow-inner shrink-0'>
+                      {key}
+                    </span>
+                    <p className='leading-snug'>{translatedLabel}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

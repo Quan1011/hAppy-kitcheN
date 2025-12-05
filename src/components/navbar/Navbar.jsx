@@ -39,13 +39,13 @@ const Navbar = () => {
             <img
               src={logoImage}
               alt='Happy Kitchen logo'
-              className='h-12 w-auto md:h-14 lg:h-16 object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.35)]'
+              className='h-10 w-auto md:h-14 lg:h-16 object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.35)]'
               loading='lazy'
             />
             <img
               src={logoChuImage}
               alt='Happy Kitchen text'
-              className='h-12 w-auto md:h-16 lg:h-20 object-contain drop-shadow-[0_6px_12px_rgba(0,0,0,0.35)]'
+              className='h-9 w-auto md:h-16 lg:h-20 object-contain drop-shadow-[0_6px_12px_rgba(0,0,0,0.35)]'
               loading='lazy'
             />
           </NavLink>
