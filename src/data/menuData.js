@@ -33,17 +33,17 @@ const codes = codeString => {
 const formatPrice = value => `${value.toFixed(2)}€`
 
 // Local section images from src/image instead of remote URLs
-import vorspeisenImage from '../image/3.jpg'
-import hauptgerichteImage from '../image/5.jpg'
-import dessertImage from '../image/6.jpg'
-import extrasImage from '../image/7.jpg'
+// import vorspeisenImage from '../image/3.jpg'
+// import hauptgerichteImage from '../image/5.jpg'
+// import dessertImage from '../image/6.jpg'
+// import extrasImage from '../image/7.jpg'
 
-const sectionImages = {
-  vorspeisen: vorspeisenImage,
-  chickenWok: hauptgerichteImage,
-  dessert: dessertImage,
-  extras: extrasImage,
-}
+// const sectionImages = {
+//   vorspeisen: vorspeisenImage,
+//   chickenWok: hauptgerichteImage,
+//   dessert: dessertImage,
+//   extras: extrasImage,
+// }
 
 const sauceCodeMeta = {
   40: codes('a 4'),

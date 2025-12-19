@@ -3,10 +3,16 @@ import { useTranslation } from 'react-i18next'
 import { allergenLegend, additiveLegend } from '../../data/menuData'
 
 // Tự động lấy toàn bộ ảnh .jpg trong thư mục image để map theo mã món
-const dishImages = import.meta.glob('../../image/*.jpg', {
+const dishImages = import.meta.glob('../../image/*.{png,jpg,jpeg,webp,svg,PNG,JPG}', {
   eager: true,
   import: 'default',
 })
+
+const imageMap = Object.keys(dishImages).reduce((acc, path) => {
+  const fileName = path.split('/').pop().replace(/\.[^/.]+$/, ""); // Lấy tên file bỏ đuôi
+  acc[fileName] = dishImages[path];
+  return acc;
+}, {});
 
 const tagMetaConfig = {
   vegan: { icon: '🥬', className: 'bg-[#dff6dd] text-[#1f4b33] border-[#b4deb5]' },
@@ -49,18 +55,14 @@ const MenuItemCard = ({ item, fallbackImage }) => {
   const hasVariations = Array.isArray(item.variations) && item.variations.length > 0
 
   // ưu tiên: ảnh gắn trực tiếp cho item > ảnh theo mã món > ảnh fallback của section
-  const codeImageKey = item.code ? `../../image/${item.code}.jpg` : null
-  const codeImage = codeImageKey ? dishImages[codeImageKey] : null
+  const codeImage = item.code ? imageMap[item.code] : null;
 
-  let variationImage = null
+  let variationImage = null;
   if (!item.image && !codeImage && Array.isArray(item.variations)) {
-    for (const variation of item.variations) {
-      if (!variation?.code) continue
-      const variationKey = `../../image/${variation.code}.jpg`
-      if (dishImages[variationKey]) {
-        variationImage = dishImages[variationKey]
-        break
-      }
+    // .find() sẽ nhanh và gọn hơn dùng vòng lặp for truyền thống
+    const foundVariation = item.variations.find(v => v?.code && imageMap[v.code]);
+    if (foundVariation) {
+      variationImage = imageMap[foundVariation.code];
     }
   }
 
