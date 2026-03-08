@@ -351,13 +351,13 @@ export const menuSections = [
         price: '6.00€',
         ...codes('a f'),
       },
-      {
-        code: '26',
-        name: 'Yakitori (3Stk.)',
-        description: 'japanische Hähnchenspieße',
-        price: '6.00€',
-        ...codes('a i'),
-      },
+      // {
+      //   code: '26',
+      //   name: 'Yakitori (3Stk.)',
+      //   description: 'japanische Hähnchenspieße',
+      //   price: '6.00€',
+      //   ...codes('a i'),
+      // },
       {
         code: '27',
         name: 'Gebackene Garnelen (3Stk.)',
