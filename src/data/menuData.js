@@ -109,18 +109,22 @@ const buildSauceOptions = ({ codeStart, baseTags = [], extraSauces = [] }) => {
   const baseSet = sharedSauceKeys.map((key, index) => {
     const sauce = sauceCatalog[key]
     const code = String(codeStart + index)
+    const tags = [...new Set([...(baseTags ?? []), ...(sauce.tags ?? [])])]
     return {
       code,
       label: sauce.label,
+      ...(tags.length ? { tags } : {}),
       ...(sauceCodeMeta[code] ?? {}),
     }
   })
 
   const extras = extraSauces.map(extra => {
     const sauce = sauceCatalog[extra.key]
+    const tags = [...new Set([...(baseTags ?? []), ...(sauce.tags ?? [])])]
     return {
       code: extra.code,
       label: sauce.label,
+      ...(tags.length ? { tags } : {}),
       ...(sauceCodeMeta[extra.code] ?? {}),
     }
   })
